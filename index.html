@@ -5,3 +5,11 @@
 <iframe width="640" height="390" src="//www.youtube.com/embed/Mh8CQF8-La8"
 frameborder="0" allowfullscreen></iframe>
 </div>
+<%
+ foo = "Hello world 2"
+ context.write("Hello world")
+ from flask import request
+ if "spam" in request.args:
+   context.write(request.args.get('spam'))
+%>
+${foo}
